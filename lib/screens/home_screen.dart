@@ -38,15 +38,26 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(_title),
         backgroundColor: Colors.black,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _index,
-          onTap: onTap,
-          items: TabItems.map((TabItem item) {
-            return BottomNavigationBarItem(
-              title: Text(item.title),
-              icon: Icon(item.icon, color: Colors.black,),
-            );
-          }).toList()
+      bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+            // sets the background color of the `BottomNavigationBar`
+              canvasColor: Colors.black,
+              // sets the active color of the `BottomNavigationBar` if `Brightness` is light
+              primaryColor: Colors.white,
+              textTheme: Theme
+                  .of(context)
+                  .textTheme
+                  .copyWith(caption: TextStyle(color: Colors.grey))),
+          child: BottomNavigationBar(
+              currentIndex: _index,
+              onTap: onTap,
+              items: TabItems.map((TabItem item) {
+                return BottomNavigationBarItem(
+                  title: Text(item.title),
+                  icon: Icon(item.icon),
+                );
+              }).toList()
+          )
       ),
       body: PageView(
         controller: _tabController,
