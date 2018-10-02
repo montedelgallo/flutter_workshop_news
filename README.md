@@ -1,8 +1,9 @@
 # workshop_news
 
-A new Flutter project.
+Progetto realizzato per il Workshop su Flutter.
 
-## Getting Started
+App per ultime notizie con chiamata ad API json.
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+
+## Risultato finale:
+![alt text](assets/screen.png)
