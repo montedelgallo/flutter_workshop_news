@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workshop_news/screens/tabs/business_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,7 +22,6 @@ class _HomeScreenState extends State<HomeScreen> {
       this._title = TabItems[tab].title;
     });
   }
-
 
   @override
   void initState() {
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
         controller: _tabController,
         onPageChanged: onTabChanged,
         children: <Widget>[
-          Text('uno'),
+          BusinessTab(),
           Text('due'),
           Text('tre')
         ],
