@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workshop_news/screens/tabs/business_tab.dart';
+import 'package:workshop_news/screens/tabs/science_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -64,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onPageChanged: onTabChanged,
         children: <Widget>[
           BusinessTab(),
-          Text('due'),
+          ScienceTab(),
           Text('tre')
         ],
       ),
